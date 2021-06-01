@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication',
     'drf_yasg',
+    'corsheaders',
 ]
 
 SWAGGER_SETTINGS = {
@@ -70,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'database.urls'
@@ -136,6 +139,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+#CORS
+CORS_ALLOW_ALL_ORIGINS = True
 #JWT
 JWT_SECRET_KEY = "somerandomstringh" #os.environ.get('JWT_SECRET_KEY')
 
