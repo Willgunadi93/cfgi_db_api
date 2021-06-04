@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'authentication',
     'drf_yasg',
     'corsheaders',
+    'finaid',
 ]
 
 SWAGGER_SETTINGS = {
